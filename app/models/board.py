@@ -2,5 +2,8 @@ from app import db
 
 class Board(db.Model):
     board_id = db.Column(db.Integer, primary_key=True, autoincrement=True)
-    card_id = db.Column(db.Integer, db.ForeignKey(
-        'card.card_id'), nullable=True)
+    title = db.Column(db.String)
+    owners_name = db.Column(db.String)
+    cards = db.relationship("Card", back_populates="board")
+# One to many relationship between board and card.
+
