@@ -8,7 +8,7 @@ class Card(db.Model):
         'board.board_id'), nullable=True)
     board = db.relationship("Board", back_populates="cards", lazy=True)
 
-def to_dict(self):
+def create_dict(self):
     card_dict = {}
     card_dict["card_id"] = self.card_id
     card_dict["hearts"] = self.hearts
@@ -16,4 +16,6 @@ def to_dict(self):
     card_dict["board_id"] = self.board_id
     
     return card_dict
+
+
 

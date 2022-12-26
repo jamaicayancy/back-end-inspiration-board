@@ -7,3 +7,13 @@ class Board(db.Model):
     cards = db.relationship("Card", back_populates="board")
 # One to many relationship between board and card.
 
+    def create_dict(self):
+        board_dict = {}
+        board_dict["board_id"] = self.board_id
+        board_dict["owners_name"] = self.owners_name
+        board_dict["cards"] = "replace me"
+
+        return board_dict
+
+
+
