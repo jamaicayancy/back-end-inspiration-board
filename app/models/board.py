@@ -12,7 +12,6 @@ class Board(db.Model):
         board_dict["board_id"] = self.board_id
         board_dict ["title"] = self.title 
         board_dict["owners_name"] = self.owners_name
-
         return board_dict
 
 

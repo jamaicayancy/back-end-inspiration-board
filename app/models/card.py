@@ -14,7 +14,6 @@ class Card(db.Model):
         card_dict["hearts"] = self.hearts
         card_dict["message"] = self.message
         card_dict["board_id"] = self.board_id
-        
         return card_dict
     
 
